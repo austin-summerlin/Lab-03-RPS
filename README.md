@@ -7,3 +7,30 @@
 5) Is there some state we need to initialize?
 6) Find all the 'events' (user clicks, form submit, etc) in your app. Ask one by one, "What happens when" for each of these events.
 7) Think about how to validate each of your steps
+
+
+
+
+What HTML elements do i need:
+    - Photos of Rock, Paper, Scissors
+        - Radio Button Inside <label>
+    - Button
+        - Event Listener
+    - Div
+        - To display results of throw
+    - Div 2
+        - To display wins
+    - Div 3
+        - To Display losses
+    - Div 4
+        - To Display Total Games
+    - Rock/Paper/Scissors
+        - Radio querrySelector
+
+What State do we need to initialize:
+    - Wins:0
+    - Total: 0
+
+What Happens on Click
+    - Randomly pick computer throw
+    - compare user/comp
