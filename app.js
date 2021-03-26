@@ -8,7 +8,6 @@ const winsEl = document.getElementById('wins');
 const lossesEl = document.getElementById('losses');
 const tiesEl = document.getElementById('ties');
 const totalEl = document.getElementById('total');
-const resetButton = document.getElementById('reset-button');
 
 let wins = 0;
 let losses = 0;
@@ -20,12 +19,29 @@ buttonEl.addEventListener('click', () => {
     const radioButtonSelecter = document.querySelector('input:checked');
     console.log(radioButtonSelecter);
     const userChoice = radioButtonSelecter.value;
+    total++;
+    totalEl.textContent = total;
 
     const compareThrows = didUserWin(userChoice, computerChoice);
+
+    if (compareThrows === 'win') {
+        wins++;
+        winsEl.textContent = wins;
+        whoWonEl.textContent = 'You Won!';
+    }
+
+    if (compareThrows === 'lose') {
+        losses++;
+        lossesEl.textContent = losses;
+        whoWonEl.textContent = 'You Lost!';
+    }
+
+    if (compareThrows === 'tie') {
+        ties++;
+        tiesEl.textContent = ties;
+        whoWonEl.textContent = 'You Tied!';
+    }
 });
 
 
-// winsEl.textContent = wins;
-// lossesEl.textContent = total - wins;
 
-// totalEl.textContent = wins + losses + ties;
