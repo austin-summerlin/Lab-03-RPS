@@ -1,5 +1,11 @@
-export function getCompRockPaperScissors(someNumber) {
-    if (someNumber === 1) return 'rock';
-    if (someNumber === 2) return 'paper';
-    if (someNumber === 3) return 'scissors';
+export function didUserWin(user, computer) {
+    if (user === 'rock' && computer === 'scissors') return 'win';
+    if (user === 'rock' && computer === 'paper') return 'lose';
+    if (user === 'rock' && computer === 'rock') return 'tie';
+    if (user === 'paper' && computer === 'scissors') return 'los';
+    if (user === 'paper' && computer === 'paper') return 'tie';
+    if (user === 'paper' && computer === 'rock') return 'win';
+    if (user === 'scissors' && computer === 'scissors') return 'tie';
+    if (user === 'scissors' && computer === 'paper') return 'win';
+    if (user === 'scissors' && computer === 'rock') return 'lose';
 }

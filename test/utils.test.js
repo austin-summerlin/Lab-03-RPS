@@ -1,45 +1,45 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { getCompRockPaperScissors } from '../utils.js';
+import { didUserWin } from '../utils.js';
 
 const test = QUnit.test;
 
-test('if it takes in one should return rock', (expect) => {
+test('if it takes in rock and rock should return tie', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 'rock';
+    const expected = 'tie';
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = getCompRockPaperScissors(1);
+    const actual = didUserWin('rock', 'rock');
 
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
 
-test('if it takes in two should return paper', (expect) => {
+test('if it takes in rock and scissors should return win', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 'paper';
+    const expected = 'win';
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = getCompRockPaperScissors(2);
+    const actual = didUserWin('rock', 'scissors');
 
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
 
-test('if it takes in three should return scissors', (expect) => {
+test('if it takes in rock and paper should return lose', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 'scissors';
+    const expected = 'lose';
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = getCompRockPaperScissors(3);
+    const actual = didUserWin('rock', 'paper');
 
     //Expect
     // Make assertions about what is expected versus the actual result
