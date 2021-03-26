@@ -27,12 +27,12 @@ button {
 }
 
 img {
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
     cursor: pointer;
-    border: solid black 1px;
+    /* border: solid black 1px;
     border-radius: 5px;
-    background-color: white;
+    background-color: white; */
 }
 
 div {
@@ -53,15 +53,15 @@ span {
     align-items: center;
 }
 
-/* input{
+input{
     display:none;
-} */
-
-:checked+label {
-    box-shadow: 50px 50px 50px 50px pink;
 }
 
-#who-won {
+input:checked + img {
+    border: solid pink 5px;
+}
+
+#who-won{
     width: 150px;
-    height: 50px;
+    height 50px;
 }
