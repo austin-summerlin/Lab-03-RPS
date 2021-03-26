@@ -53,9 +53,9 @@ span {
     align-items: center;
 }
 
-input{
+/* input{
     display:none;
-}
+} */
 
 input:checked + img {
     border: solid pink 5px;
